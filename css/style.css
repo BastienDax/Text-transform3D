@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+    background-color: #111;
+}
+.div-word {
+    font-size: 2rem;
+    font-style:italic;
+    color: #F7F7F7;
+    font-family: Helvetica;
+}
+.word-top {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    transform: translate3d(5px,0,0);
+    position: absolute;
+}
+
+.word-bottom {
+    clip-path: polygon(0 50%,100% 50%,100% 100%,0 100%);
+}
+
+.word-top::selection, 
+.word-bottom::selection {
+    color: #D3000D;
+    background-color: transparent;
+}
